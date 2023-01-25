@@ -13,11 +13,11 @@ namespace SquashTheBugs
         {
             // declare int counter
             //Missing a semi-colon
-            //int i = 0 //syntax error
+            //int i = 0 //syntax error 
             int i = 0;
 
             // loop through the numbers 1 through 10
-            //displays 1-9
+            //displays 1-9 and we want it to show up to 10
             //for (i = 1; i < 10; ++i)
             for (i = 1; i < 11; ++i)
                 {
@@ -38,14 +38,14 @@ namespace SquashTheBugs
 
                 // increment the counter
                 //increment counter using i++
-                //i = i + 1;//logic error
+                //i = i + 1;//logic error as the code will add once
                 i++;
                 Console.WriteLine("These numbers have been processed: " + allNumbers);
             }
 
             // output all numbers which have been processed
             // wrong scope; should be in for loop
-            // missing a plus sign
+            // missing a plus sign which breaks the code as it has no idea what to do 
             //Console.WriteLine("These numbers have been processed: " allNumbers); //syntax+logic error
         }
     }
