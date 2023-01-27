@@ -31,8 +31,13 @@ namespace FavoriteColorAndNumber
     /*
      * This is a multiline comment
      */
-    static internal class Program
+    static void PrintMyColor(string sColorString)
     {
+        sColorString += " is your favorite color";
+        Console.WriteLine(sColorString);
+
+    } 
+    
         //COMMENTS FOR METHODS SHOULD LOOK LIKE THIS
         //Method:
         //Purpose:
