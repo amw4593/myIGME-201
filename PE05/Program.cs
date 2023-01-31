@@ -15,6 +15,7 @@ namespace PE05
             if (operand1 >= 10 && operand2 >= 10)
             {
                 Console.WriteLine("Enter New Numbers!");
+                
             }
                 Console.WriteLine("Operand1: ");
             if (operand1 >= 10){
