@@ -19,7 +19,8 @@ namespace PE06
             for(int i = 0; i < 8; i++) 
             {
                 Console.Write("Pick a Number Between 1 and 100: ");
-                Console.ReadLine(randomNumber);
+                Console.WriteLine(randomNumber);
+
             }
         }
     }
