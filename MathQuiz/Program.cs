@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace MathQuiz
 {
@@ -44,6 +46,7 @@ namespace MathQuiz
             string sAgain = "";
 
             bool bValid = false;
+
 
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
@@ -182,6 +185,19 @@ namespace MathQuiz
 
                 // if response == answer, output flashy reward and increment # correct
                 // else output stark answer
+                static Timer timeOutTimer;
+                double TimesUp;
+
+                timeOutTimer = new Timer(nResponse.Length * 5 + 5);
+
+                timeOutTimer.Elapsed += new ElapsedEventHandler(TimesUp);
+
+                timeOutTimer.Start();
+
+                string sAnswer = null;
+                sAnswer = Console.ReadLine();
+
+                timeOutTimer.Stop();
                 if (nResponse == nAnswer)
                 {
                     Console.BackgroundColor = ConsoleColor.Blue;
