@@ -1,15 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace PE12
+public class Test
 {
-    internal class Program
+    private string myString = "Test";
+
+    public virtual string GetString()
     {
-        static void Main(string[] args)
+        return myString;
+    }
+
+    public string MyString
+    {
+        set
         {
+            myString = value;
         }
     }
 }
+
+public class TestDev : Test
+{
+    public override string GetString()
+    {
+        return base.GetString() + " (output from the derived class)";
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        TestDev myObj = new TestDev();
+        string result = myObj.GetString();
+        Console.WriteLine(result);
+    }
+}
+
