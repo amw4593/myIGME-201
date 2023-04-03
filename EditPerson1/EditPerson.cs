@@ -4,9 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EditPerson1
+public sealed class Circus
 {
-    internal class EditPerson
+    public string name;
+}
+
+
+static class Program
+{
+    static void Main()
     {
+
+        Circus myCircus = new Circus();
     }
 }
+
